@@ -31,8 +31,9 @@ class Solution {
 	}
 
 	public int maxProfit(int[] prices) {
-		if (prices.length <= 1)
+		if (prices.length <= 1){
 			return 0; // 由于没定义第一天的默认收益，所以判断一下
+		}
 		int max = 0; // 依旧理论最大值
 		int min = prices[0]; // 依旧理论最小值
 		for (int i = 1; i < prices.length; i++) {
