@@ -1,7 +1,5 @@
 package s1592;
 
-import java.util.StringJoiner;
-
 /**
  * 1592. 重新排列单词间的空格
  */
@@ -13,7 +11,7 @@ class Solution {
         // 空格的数量
         int spaceNum = text.length() - text.replace(" ", "").length();
         // 间隔空格的数量
-        int s = 0;
+        int s;
         if (wordNum > 1) {
             s = spaceNum / (wordNum - 1);
         } else {
