@@ -1,4 +1,4 @@
-package s0667;
+package s0677;
 
 import java.util.HashMap;
 import java.util.Map;
