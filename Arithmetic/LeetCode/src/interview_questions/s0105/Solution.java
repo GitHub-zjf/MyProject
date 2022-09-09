@@ -1,4 +1,4 @@
-package mianshi0105;
+package interview_questions.s0105;
 
 class Solution {
 	public boolean oneEditAway(String first, String second) {

@@ -1,4 +1,4 @@
-package mianshi0406;
+package interview_questions.s0406;
 
 class Solution {
 	public TreeNode inorderSuccessor(TreeNode root, TreeNode p) {

@@ -1,4 +1,4 @@
-package mianshi0406;
+package interview_questions.s0406;
 
 public class TreeNode {
 	int val;

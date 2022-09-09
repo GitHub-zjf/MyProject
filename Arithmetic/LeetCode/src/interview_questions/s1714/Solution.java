@@ -1,4 +1,4 @@
-package interview17_14;
+package interview_questions.s1714;
 
 import java.util.Arrays;
 
