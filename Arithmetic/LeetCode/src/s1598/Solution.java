@@ -1,26 +1,23 @@
 package s1598;
 
-import java.util.Stack;
-
 /**
  *  1598. 文件夹操作日志搜集器
  */
 class Solution {
     public int minOperations(String[] logs) {
-        Stack<String> stack = new Stack<>();
+        int depth = 0;
         for (String log : logs) {
             if ("../".equals(log)) {
-                if (!stack.isEmpty()) {
-                    stack.pop();
+                if (depth > 0) {
+                    depth--;
                 }
             } else if ("./".equals(log)) {
                 continue;
             } else {
-                stack.push(log);
+                depth++;
             }
         }
-
-        return stack.size();
+        return depth;
     }
 
     public static void main(String[] args) {
