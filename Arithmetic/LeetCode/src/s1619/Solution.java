@@ -3,19 +3,18 @@ package s1619;
 import java.util.Arrays;
 
 /**
- *  1619. 删除某些元素后的数组均值
+ * 1619. 删除某些元素后的数组均值
  */
 class Solution {
     public double trimMean(int[] arr) {
         Arrays.sort(arr);
         int len = arr.length;
         int sum = 0;
-        int num = (int) (len * 0.05);
-        for (int i = num; i < len - num; i++) {
+        for (int i = len / 20; i < len * 19 / 20; i++) {
             sum += arr[i];
         }
 
-        return sum / ((len - 2 * num) * 1.0);
+        return sum / (len * 0.9);
     }
 
     public static void main(String[] args) {
