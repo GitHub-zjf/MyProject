@@ -1,42 +1,27 @@
 package s0475;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
+/**
+ * 475. 供暖器
+ * tip1: 对于每个房屋，要么用前面的暖气，要么用后面的，二者取近的，得到距离
+ * tip2: 每间房子找距离自己最近的热水器，计算出【最近距离】，然后取所有【最近距离】的最大值即可
+ */
 class Solution {
-	public int findRadius(int[] houses, int[] heaters) {
-		int len1 = houses.length;
-		int len2 = heaters.length;
-		Set<Integer> set1 = new HashSet<>();
-		Set<Integer> set2 = new HashSet<>();
-		Set<Integer> set3 = new HashSet<>();
-		for (int i = 0; i < len1; i++) {
-			set1.add(houses[i]);
-		}
-		for (int i = 0; i < len2; i++) {
-			set2.add(heaters[i]);
-			set3.add(heaters[i]);
-		}
-		int radius = 0;
-		while (true) {
-			if (set3.containsAll(set1)) {
-				return radius;
-			}
-			Iterator<Integer> iterator = set2.iterator();
-			while (iterator.hasNext()) {
-				Integer integer = iterator.next();
-				set3.add(integer + 1);
-				set3.add(integer - 1);
-			}
-			set2.addAll(set3);
-			radius++;
-		}
-	}
-
-	public static void main(String[] args) {
-		int[] houses = new int[] { 1, 5 };
-		int[] heaters = new int[] { 2 };
-		System.out.println(new Solution().findRadius(houses, heaters));
-	}
+    public int findRadius(int[] houses, int[] heaters) {
+        Arrays.sort(houses);
+        Arrays.sort(heaters);
+        int max = 0;
+        for (int house : houses) {
+            int min = Integer.MAX_VALUE;
+            for (int heater : heaters) {
+                min = Math.min(min, Math.abs(house - heater));
+            }
+            max = Math.max(max, min);
+        }
+        return max;
+    }
 }
