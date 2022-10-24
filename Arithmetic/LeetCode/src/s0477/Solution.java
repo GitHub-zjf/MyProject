@@ -1,21 +1,24 @@
 package s0477;
 
+/**
+ * 477. 汉明距离总和
+ * 逐位统计
+ */
 class Solution {
-	public int totalHammingDistance(int[] nums) {
-		int result = 0;
-		int len = nums.length;
-		for (int i = 0; i < len; i++) {
-			for (int j = i + 1; j < len; j++) {
-				result = result + Integer.bitCount(nums[i] ^ nums[j]);
-			}
-		}
-		return result;
-	}
+    public int totalHammingDistance(int[] nums) {
+        int ans = 0, n = nums.length;
+        for (int i = 0; i < 30; i++) {
+            int c = 0;
+            for (int num : nums) {
+                c += (num >> i) & 1;
+            }
+            ans += c * (n - c);
+        }
 
-	public static void main(String[] args) {
-		int[] nums = new int[] { 2, 4, 14, 10 };
-		int num = (2 ^ 4) + (2 ^ 14) + (4 ^ 14);
-		System.out.println(Integer.bitCount(num));
-//		System.out.println(new Solution().totalHammingDistance(nums));
-	}
+        return ans;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(3 & 1);
+    }
 }
