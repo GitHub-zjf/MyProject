@@ -1,5 +1,2 @@
-Arithmetic/.idea/*
-Arithmetic/out/*
-SpringBoot/*
-JavaSE/*
-SpringCloud/*
+/.idea/*
+/out/*
