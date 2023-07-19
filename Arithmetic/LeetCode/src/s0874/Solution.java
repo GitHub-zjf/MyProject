@@ -5,6 +5,7 @@ import java.util.Set;
 
 /**
  * @author zhengjianfeng
+ * 874. 模拟行走机器人
  */
 class Solution {
     public int robotSim(int[] commands, int[][] obstacles) {
