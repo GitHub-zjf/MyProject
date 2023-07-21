@@ -1,4 +1,4 @@
-package jianzhiOffer2.s012;
+package jian_zhi_offer.II.s0012;
 
 class Solution {
     public int pivotIndex(int[] nums) {

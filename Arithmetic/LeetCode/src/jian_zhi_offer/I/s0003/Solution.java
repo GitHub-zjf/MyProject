@@ -1,4 +1,4 @@
-package jianzhiOffer.s0003;
+package jian_zhi_offer.I.s0003;
 
 import java.util.HashMap;
 import java.util.Map;
