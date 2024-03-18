@@ -1,5 +1,8 @@
 package daily.s0303;
 
+/**
+ *  303. 区域和检索 - 数组不可变
+ */
 class NumArray {
 
     int[] sum;
