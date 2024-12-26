@@ -1,8 +1,5 @@
 package daily.s3174;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * 3174. Çå³ýÊý×Ö
  */
@@ -18,9 +15,5 @@ class Solution {
         }
         return ret.toString();
 
-    }
-
-    public static void main(String[] args) {
-        new Solution().clearDigits("abc123");
     }
 }
