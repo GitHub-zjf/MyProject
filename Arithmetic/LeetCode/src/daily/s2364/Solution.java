@@ -12,6 +12,7 @@ class Solution {
         // i > j || nums[i] - i == nums[j] - j
         HashMap<Integer, Integer> mp = new HashMap<>();
         long res = 0;
+        // 4 1 1 3
         for (int i = 0; i < nums.length; i++) {
             int key = nums[i] - i;
             res += i - mp.getOrDefault(key, 0);
